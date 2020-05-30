@@ -9,6 +9,7 @@
     </head>
 
     <body>
+    <div class="bar" style="width:50px;height:200px;"></div>
 
     <h1 class="gamma"></h1>
 
@@ -19,8 +20,9 @@
         <script>
 
             window.addEventListener('deviceorientation', (e) => {
-
-  console.log('Gamma: ' + e.gamma);
+document.querySelector(".bar").style.transform = "rotate("+((-1)*e.alpha)+"deg)";
+  
+console.log('Gamma: ' + e.gamma);
 
   console.log('Beta: ' + e.beta);
 
