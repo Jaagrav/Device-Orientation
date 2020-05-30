@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Device Motion</title>
+
+    </head>
+
+    <body>
+
+    <h1 class="gamma"></h1>
+
+    <h1 class="beta"></h1>
+
+    <h1 class="alpha"></h1>
+
+        <script>
+
+            window.addEventListener('deviceorientation', (e) => {
+
+  console.log('Gamma: ' + e.gamma);
+
+  console.log('Beta: ' + e.beta);
+
+  console.log('Alpha: ' + e.alpha); document.querySelector(".gamma").innerHTML="Gamma: "+e.gamma; document.querySelector(".beta").innerHTML="Beta: "+e.beta; document.querySelector(".alpha").innerHTML="Alpha: "+e.alpha;
+
+})
+
+        </script>
+
+    </body>
+
+</html>
