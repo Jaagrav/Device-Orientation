@@ -20,13 +20,13 @@
         <script>
 
             window.addEventListener('deviceorientation', (e) => {
-document.querySelector(".bar").style.transform = "rotate("+(360 - e.alpha)+"deg)";
+document.querySelector(".bar").style.transform = "rotate("+((-1)*e.alpha)+"deg)";
   
 console.log('Gamma: ' + e.gamma);
 
   console.log('Beta: ' + e.beta);
 
-  console.log('Alpha: ' + e.alpha); document.querySelector(".gamma").innerHTML="Gamma: "+e.gamma; document.querySelector(".beta").innerHTML="Beta: "+e.beta; document.querySelector(".alpha").innerHTML="Alpha: "+e.alpha;
+  console.log('Alpha: ' + e.alpha+" "+(-1)*e.alpha); document.querySelector(".gamma").innerHTML="Gamma: "+e.gamma; document.querySelector(".beta").innerHTML="Beta: "+e.beta; document.querySelector(".alpha").innerHTML="Alpha: "+e.alpha;
 
 })
 
